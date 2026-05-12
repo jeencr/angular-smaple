@@ -1,4 +1,28 @@
 <h1>{{ title }}</h1>
 <button mat-button color="primary">hgvgh</button>
 
+<div *ngIf = "success_msg; else error_msg">User Added Successfully</div>
+<!-- <app-list-profile></app-list-profile> -->
+<div>
+<ng-template #error_msg>
+    <div>User was not added</div>
+</ng-template>
+</div>
+<h1>ngFor</h1>
+<ul>
+    <li *ngFor="let c of contacts">
+        {{ c.name }} <br>
+        {{ c.place }} <br>
+        {{ c.contact }}
+    </li>
+</ul>
+<h1>ngSwitch</h1>
+<div [ngSwitch] = "name">
+    <div *ngSwitchCase="'jeevan'">Jeevan is in name</div>
+    <div *ngSwitchCase="'lola'">lola is in name</div>
+    <div *ngSwitchCase="'lemon'">lemon is in name</div>
+    <div *ngSwitchCase="'logan'">logan is in name</div>
+    <div *ngSwitchDefault>default is in name</div>
+</div>
+
 <router-outlet></router-outlet>
