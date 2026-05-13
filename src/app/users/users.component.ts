@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
+  title = 'title of the user component'
+
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateVal(){
+
   }
 
 }

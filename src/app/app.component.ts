@@ -1,3 +1,4 @@
+import { flatten } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -28,5 +29,23 @@ export class AppComponent {
   
 ];
 name = 'logan';
+
+txtcolor = 'blue';
+namefont = '100px';
+clicked= false;
+
+isLoggedIn = false;
+salary = "";
+tax = "";
+income = 0;
+
+incomeAmount(){
+  this.income = Number(this.salary)-Number(this.tax)
+}
+
+hello(){
+  console.log('Hello world')
+  this.clicked = true;
+}
   
 }
