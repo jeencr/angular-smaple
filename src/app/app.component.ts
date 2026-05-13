@@ -11,16 +11,19 @@ export class AppComponent {
   success_msg = false;
 
   contacts = [{
+    'id':1,
     'name':'user1',
     'place':'place1',
     'contact':78283827,
   },
 {
+    'id':2,
     'name':'user2',
     'place':'place2',
     'contact':7246565827,
   },
   {
+    'id':3,
     'name':'user2',
     'place':'place2',
     'contact':7815151527,
