@@ -44,7 +44,7 @@
     </tr>
 
     <tr *ngFor="let c of contacts">
-        <td [style.color]="txtcolor">{{ c.name }}</td>
+        <td [style.color]="txtcolor">{{ c.name | uppercase }}</td>
         <td>{{ c.place }}</td>
         <td>{{ c.contact }}</td>
     </tr>
@@ -62,7 +62,8 @@
     <button (click)="incomeAmount()" mat-button color="green">Show Income</button>
 
 </div>
-<div align="center" >{{ income }}</div>
+<div align="center" >{{ income | currency:'INR' }}</div>
+<div align="center" >{{ todayDate | date:'d-MM-yyyy' }}</div>
 
 
 <router-outlet></router-outlet>

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent { 
   title = 'sample1';
   success_msg = false;
 
@@ -48,4 +48,5 @@ hello(){
   this.clicked = true;
 }
   
+todayDate = Date.now();
 }
