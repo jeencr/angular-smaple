@@ -1,8 +1,8 @@
-<h1>{{ title }}</h1>
+<!-- <h1>{{ title }}</h1>
 <button mat-button color="primary">hgvgh</button>
 
 <div *ngIf = "success_msg; else error_msg">User Added Successfully</div>
-<!-- <app-list-profile></app-list-profile> -->
+<app-list-profile></app-list-profile> 
 <div>
 <ng-template #error_msg>
     <div>User was not added</div>
@@ -64,6 +64,9 @@
 </div>
 <div align="center" >{{ income | currency:'INR' }}</div>
 <div align="center" >{{ todayDate | date:'d-MM-yyyy' }}</div>
+ -->
+
 
 
 <router-outlet></router-outlet>
+<router-outlet name="add"></router-outlet>

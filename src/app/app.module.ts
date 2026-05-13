@@ -9,11 +9,18 @@ import { ProfileModule } from './profile/profile.module';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
+import { LoansComponent } from './loans/loans.component';
+import { LoanTypesComponent } from './loan-types/loan-types.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    UsersComponent
+    UsersComponent,
+    LoansComponent,
+    LoanTypesComponent,
+    AddLoansComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy,useClass:HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
