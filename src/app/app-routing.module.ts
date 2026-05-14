@@ -9,14 +9,17 @@ import { UsersComponent } from './users/users.component';
 import { ClientsComponent } from './clients/clients.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuard } from './auth.guard';
+import { UnsavedGuard } from './unsaved.guard';
 
 
 const routes : Routes = [
-{path:'add-loans',component:AddLoansComponent},
-{path:'loan-types',component:LoanTypesComponent},
+{path:'add-loans',component:AddLoansComponent,canActivate:[AuthGuard]},
+{path:'loan-types',component:LoanTypesComponent,},
 {path:'user_view/:id',component:UsersComponent},
 {path:'clients',component:ClientsComponent},
-{path:'search',component:SearchComponent},
+{path:'search',component:SearchComponent,canDeactivate:[UnsavedGuard]},
+{ path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
 {path:'**',component:PageNotFoundComponent},
 ];
 
