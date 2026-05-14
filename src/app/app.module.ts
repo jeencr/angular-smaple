@@ -13,6 +13,9 @@ import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { AppRoutingModule } from './app-routing.module';
     UsersComponent,
     LoansComponent,
     LoanTypesComponent,
-    AddLoansComponent
+    AddLoansComponent,
+    ClientsComponent,
+    SearchComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -6,12 +6,18 @@ import { AddLoansComponent } from './add-loans/add-loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { LoansComponent } from './loans/loans.component';
 import { UsersComponent } from './users/users.component';
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes : Routes = [
 {path:'add-loans',component:AddLoansComponent},
 {path:'loan-types',component:LoanTypesComponent},
 {path:'user_view/:id',component:UsersComponent},
+{path:'clients',component:ClientsComponent},
+{path:'search',component:SearchComponent},
+{path:'**',component:PageNotFoundComponent},
 ];
 
 @NgModule({

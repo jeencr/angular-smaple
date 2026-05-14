@@ -1,0 +1,17 @@
+<p>clients works!</p>
+<h1>List of clients</h1>
+<table [cellPadding]="10">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>phone</th>
+    </tr>
+
+    <tr *ngFor="let client of clientsLis">
+        <td>{{ client.clientId }}</td>
+        <td>{{ client.name }}</td>
+        <td>{{ client.phone }}</td>
+        <td><a [routerLink]="['/edit', client.clientId]">Edit</a></td>
+        <td><a [routerLink]="['/delete', client.clientId]">Delete</a></td>
+    </tr>
+</table>
