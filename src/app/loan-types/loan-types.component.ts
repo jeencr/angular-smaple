@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-loan-types',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loan-types.component.scss']
 })
 export class LoanTypesComponent implements OnInit {
-
+ 
   constructor() { }
+   addLoanTypeForm! : FormGroup
 
   ngOnInit(): void {
+    this.addLoanTypeForm
   }
 
 }

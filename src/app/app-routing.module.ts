@@ -20,6 +20,7 @@ const routes : Routes = [
 {path:'clients',component:ClientsComponent},
 {path:'search',component:SearchComponent,canDeactivate:[UnsavedGuard]},
 { path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
+{ path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
 {path:'**',component:PageNotFoundComponent},
 ];
 

@@ -1,0 +1,23 @@
+<p>add-customers</p>
+
+<div style="padding: 5px">
+  <form #addCustomerForm="ngForm" (submit)="addCustomer(addCustomerForm)">
+    <div style="padding: 5px">
+      <label for="">Name: </label><input type="text" [(ngModel)]="name" name="name" />
+    </div>
+    <div style="padding: 5px">
+      <label for="">Email: </label><input type="text" [(ngModel)]="email" name="email"/>
+    </div>
+    <div style="padding: 5px">
+      <label for="">Phine: </label><input type="text" [(ngModel)]="phone" name="phone" />
+    </div>
+    <div style="padding: 5px">
+      <label for="">Address: </label><input type="text" [(ngModel)]="address" name="address" />
+    </div>
+    <div style="padding: 30px"><button type="submit">Submit</button></div>
+  </form>
+</div>
+
+<div [align]="'center'" style="font-size: 50px">
+  {{ name }}
+</div>
